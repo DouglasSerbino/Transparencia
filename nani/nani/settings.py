@@ -25,7 +25,7 @@ SECRET_KEY = 't2g-wwm0=sy2f*us0dxyaf@i-uvjv%11%yth41al3l*j5q2-d_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
