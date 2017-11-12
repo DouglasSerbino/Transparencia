@@ -2,3 +2,11 @@
 {% block titulo %}
 	Carga de documentos
 {% endblock titulo %}
+{% block contenido %}
+
+{% csrf_token %}
+	<form action="" method="post" accept-charset="utf-8">
+		{{ form }}
+		<input type="submit" value="Cargar archivos">
+	</form>
+{% endblock contenido %}

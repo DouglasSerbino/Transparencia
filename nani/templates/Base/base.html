@@ -41,9 +41,29 @@
         <!-- ============================================================== -->
         <!-- Page Content -->
         <!-- ============================================================== -->
-        {% block contenido %}
-            {% include "Laip/content.html" %}
-        {% endblock contenido %}
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="white-box">
+                        {% block contenido %}
+                        {% include "Laip/content.html" %}
+                        {% endblock contenido %}
+                        <!-- /.container-fluid -->
+                    </div>
+                </div>
+            </div>
+
+        {% block right_sidebar %}
+            {% include "Laip/right_sidebar.html" %}
+        {% endblock right_sidebar %}
+       
+        </div>
+        {% block footer %}
+        {% include "Laip/footer.html" %}
+        {% endblock footer %}
+    </div>
         
         <!-- ============================================================== -->
         <!-- End Page Content -->

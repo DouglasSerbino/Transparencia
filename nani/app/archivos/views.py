@@ -6,4 +6,13 @@ from .forms import DocumentoForm
 
 # Create your views here.
 def documentos(request):
-	return render(request, "Administracion/documentos.html", {})
+	if request.method == 'POST':
+		form = DocumentoForm(request.POST)
+
+		if form.is_valid():
+			form.save()
+		else:
+			form = DocumentoForm()
+	else:
+		form = DocumentoForm()
+	return render(request, "Administracion/documentos.html", {'form':form})
