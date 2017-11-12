@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.shortcuts import get_list_or_404, get_object_or_404
+
 from django.shortcuts import render
 from forms import DocumentoForm
 from models import Documento
@@ -21,7 +23,7 @@ def documentos(request):
 	return render(request, "Administracion/documentos.html", {'form':form, 'documento':documento})
 
 def editardocs(request, id_documento):
-	documento = Documento.objects.get(id=id_documento)
+	documento = get_object_or_404(Documento, id=id_documento)
 	form = DocumentoForm(request.POST or None, request.FILES or None, instance=documento)
 	if form.is_valid():
 		form.save()
