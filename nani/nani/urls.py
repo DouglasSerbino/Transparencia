@@ -18,6 +18,11 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+<<<<<<< HEAD
     url(r'^archivos/', include('app.archivos.urls', namespace="archivos")),
     url(r'^usuarios/', include('app.usuarios.urls', namespace="usuarios"))
+=======
+    url(r'^', include('app.archivos.urls', namespace="archivos")),
+    url(r'^', include('app.usuarios.urls', namespace="usuarios"))
+>>>>>>> 5a01debfff5c98c352071349b41160118d38771b
 ]
