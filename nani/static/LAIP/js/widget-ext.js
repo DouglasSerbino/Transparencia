@@ -463,7 +463,6 @@ $(document).ready(function () {
     });
     update();
 
-
     // This is for Sparkline-chart
 
     var sparklineLogin = function () {

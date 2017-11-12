@@ -62,7 +62,7 @@ var plot = $.plot("#placeholder", [getRandomData()], {
     xaxis: {
         show: false
     },
-    colors: ["#ff7676"],
+    colors: ["#fb9678"],
     grid: {
         color: "#AFAFAF",
         hoverable: true,
@@ -152,8 +152,6 @@ $(document).ready(function () {
 //Flot Pie Chart
 $(function () {
 
-
-
     var data = [{
         label: "Series 0",
         data: 10,
@@ -194,8 +192,6 @@ $(function () {
             defaultTheme: false
         }
     });
-
-    $('.legend > div').remove();
 
 });
 //Flot Moving Line Chart
