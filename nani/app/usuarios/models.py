@@ -26,6 +26,7 @@ class PerfilInstitucion(models.Model):
 class Usuario(models.Model):
 	nombre = models.CharField(max_length=25)
 	correo = models.EmailField()
+	password = models.CharField(max_length=50)
 	institucion = models.OneToOneField(PerfilInstitucion, blank=True, null=True)
 
 # Nombre: Rol
