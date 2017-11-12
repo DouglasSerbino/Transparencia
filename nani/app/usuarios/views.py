@@ -26,6 +26,6 @@ class UsuarioList(generics.ListCreateAPIView):
 		return Response({'Usuarios': serializer.data})
 
 class UsuarioDetail(generics.RetrieveUpdateDestroyAPIView):
-	queryset = Dato.objects.all()
-	serializer_class = DatoSerializer
+	queryset = Usuario.objects.all()
+	serializer_class = UsuarioSerializer
 
