@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'app.archivos',
     'app.instituciones',
     'app.usuarios',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,10 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASES' : [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+
+}
