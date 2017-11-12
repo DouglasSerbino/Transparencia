@@ -81,7 +81,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'transparencia',
-        'USER': 'transparencia_user',
+        'USER': 'root',
         'PASSWORD': 's8oESeL5',
         'PORT': '3306',
         'HOST': '127.0.0.1',
