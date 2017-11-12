@@ -9,6 +9,7 @@ from django.db import models
 # Create your models here.
 class Documento(models.Model):
 	nombre_documento = models.CharField(max_length=100, unique=True)
+	descripcion = models.CharField(max_length=500)
 	archivo = models.FileField(upload_to='documentos/')
 
 	class Meta:
