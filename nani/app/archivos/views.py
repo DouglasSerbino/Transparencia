@@ -9,12 +9,10 @@ from models import Documento
 def documentos(request):
 	documento = Documento.objects.all()
 	if request.method == 'POST':
-		form = DocumentoForm(request.POST)
-
+		form = DocumentoForm(request.POST, request.FILES)
 		if form.is_valid():
 			form.save()
-		else:
-			form = DocumentoForm()
+		return render(request, "Administracion/documentos.html", {'form':form, 'documento':documento})
 	else:
 		form = DocumentoForm()
 	return render(request, "Administracion/documentos.html", {'form':form, 'documento':documento})
