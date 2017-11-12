@@ -28,6 +28,8 @@ class Usuario(models.Model):
 	correo = models.EmailField()
 	password = models.CharField(max_length=50)
 	institucion = models.OneToOneField(PerfilInstitucion, blank=True, null=True)
+	def __str__(self):
+		return '%s' %(self.nombre)
 
 # Nombre: Rol
 # Autor: Kendal Sosa
@@ -42,10 +44,3 @@ class Rol(models.Model):
 class Dominio(models.Model):
 	nombre_dominio = models.CharField(max_length=50)
 
-	def get_dominio(self):
-		'''Retorna el dominio al que pertenece un usuario'''
-		dominio = None
-		if self.nombre_dominio.exists():
-			dominio = self.nombre_dominio
-
-		return dominio

@@ -7,7 +7,12 @@ from django.contrib import admin
 from models import PerfilInstitucion, Usuario, Dominio, Rol
 
 # Register your models here.
-admin.site.register(Usuario)
+class UsuarioAdmin(admin.ModelAdmin):
+	''''''
+	list_display = ('nombre', 'correo')
+
+admin.site.register(Usuario, UsuarioAdmin)
+
 admin.site.register(Rol)
 admin.site.register(Dominio)
 admin.site.register(PerfilInstitucion)
